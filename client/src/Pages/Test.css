@@ -1,0 +1,53 @@
+:root{
+    --darkerBlue:#51819B;
+    --lighterBlue: #93bfcf;
+    --blueGray: #bdcdd6;
+    --wheat: #eee9da;
+    --darkWheat: #e2d6b3;
+    --white: #FFFFFF;
+    --bg: #000;
+    --hover-text: #000;
+    --grad1: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    --grad2: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.bubble_body {
+    min-height: 100vh;
+}
+
+.bubble_container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    margin: 0 4px;
+    border-radius: 5px;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(80s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh)
+        scale(0);
+    }
+    100% {
+        transform: translateY(-10vh)
+        scale(1);
+    }
+} 

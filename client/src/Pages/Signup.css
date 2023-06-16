@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.signup * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --linear-grad: linear-gradient(to right, #141E30, #243B55);
+    --grad-clr1: #141E30;
+    --grad-clr2: #243B55;
+    --darkerBlue:#51819B;
+    --lighterBlue: #93bfcf;
+    --blueGray: #bdcdd6;
+    --wheat: #eee9da;
+    --white: #FFFFFF;
+    --cream: #EEE9DA;
+    --main: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+body.signup  {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.signup .container { /* all-background*/
+    position: relative;
+    width: 850px;
+    height: 500px;
+    box-shadow: 25px 30px 55px #5557;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.signup .form-container {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    padding: 0 40px;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-up-container {
+    opacity: 0;
+    z-index: 2;
+}
+.sign-in-container {
+    z-index: 2;
+}
+
+.signup form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px;
+}
+h1 {
+    letter-spacing: 1.5px;
+}
+
+.social-container {
+    margin: 15px 0px;
+}
+.social-container .social {
+    margin-right: 10px; 
+  }
+.social-container a {
+    border: 1px solid #DDD;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+}
+
+.signup span {
+    font-size: 12px;
+}
+
+.infield {
+    position: relative;
+    margin: 8px 0px;
+    width: 100%;
+}
+
+.signup input {
+    width: 100%;
+    padding: 12px 8px;
+    background-color: #f3f3f3;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.signup input:focus {
+    border-radius: 0;
+}
+
+.signup label {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background: var(--linear-grad);
+    transition: 0.3s;
+}
+.signup input:focus ~ label {
+    width: 100%;
+}
+
+.signup a {
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.signup a.forgot {
+    padding-bottom: 3px;
+}
+
+.signup button {
+    border-radius: 5px;
+    background: var(--grad-clr2);
+    color: #FFF;
+    font-size: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.signup .form-container button {
+    margin-top: 17px;
+    transition: 80ms ease-in;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9;
+}
+
+#overlayBtn {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 304px;
+    transform: translateX(-50%);
+    width: 143.67px;
+    height: 40px;
+    background: transparent;
+    border-radius: 5px;
+    border: none;
+}
+
+.overlay { 
+    position: relative;
+    background: var(--darkerBlue);
+    color: #FFF;    
+    left: -150%;
+    height: 100%;
+    width: 250%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 40px;
+    text-align: center;
+    height: 100%;
+    width: 340px;
+    transition: 0.6s ease-in-out;
+}
+
+.overlay-left {
+    right: 60%;
+    transform: translateX(-12%);
+}
+.overlay-right {
+    right: 0;
+    transform: translateX(0%);
+}
+
+.overlay-panel h1 {
+    color: #FFF;
+}
+
+.signup p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin: 25px 0px 35px;
+}
+
+.overlay-panel button {
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+.right-panel-active .overlay-container {
+    transform: translateX(-150%);
+}
+.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+.right-panel-active .overlay-left {
+    transform: translateX(25%);
+}
+.right-panel-active .overlay-right {
+    transform: translateX(35%);
+}
+
+.right-panel-active .sign-in-container {
+    transform: translateX(20%);
+    opacity: 0;
+}
+.right-panel-active .sign-up-container {
+    transform: translateX(66.7%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+@keyframes show {
+    0%, 50% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50.1%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+
+}
+
+.btnScaled {
+    animation: scaleBtn 0.6s;
+}
+@keyframes scaleBtn {
+    0% {
+        width: 143.67px;
+    }
+    50% {
+        width: 250px;
+    }
+    100% {
+        width: 143.67px;
+    }
+}
+
+
+.signup footer {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+.signup footer mark {
+    padding: 8px 30px;
+    border-radius: 7px;
+}
+.signup footer a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003;
+}
+
+
+  .signup .signin_button, .signup .signup_button {
+    border-radius: 5px;
+    background: var(--main);
+    color: #333;
+    font-size: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .signin_button i, .signup_button i {
+    position: absolute;
+    top: 1.1em;
+    right: 1em;
+    fill: #fff;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .signin_button p, .signup_button p {
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    text-transform: uppercase;
+  }
+  .signin_button:hover p, .signup_button:hover p {
+    margin-right: 3rem;
+    color: var(--white);
+  }
+  .signin_button:hover i, .signup_button:hover i {
+    opacity: 1;
+  }
+  .signin_button:hover, .signup_button:hover {
+    background-image: linear-gradient(92.47deg, #6096B4 0%, #EEE9DA 49.6%,
+     rgba(96, 150, 180, 0) 141.04%);
+     box-shadow: 25px 30px 55px #5557;
+  }

@@ -1,0 +1,215 @@
+:root{
+    --darkerBlue:#51819B;
+    --lighterBlue: #93bfcf;
+    --blueGray: #bdcdd6;
+    --wheat: #eee9da;
+    --white: #FFFFFF;
+    --cream: #EEE9DA;
+    --main: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+body {
+    font-family: Arial, sans-serif;
+      background-image: url("../components/img/des2.png");
+    overflow: hidden;
+}
+
+#user_icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: #51819B;
+    font-size: 60px;
+    z-index: 2;
+    padding: 1rem 1rem 1rem 1rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: -3rem;
+    background-image: var(--main)
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: .5rem;
+    margin-left: -1rem;
+    
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.form-box {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(193, 193, 193, 0.1); 
+    box-shadow: 0px 4px 4px rgba(238, 233, 218, 0.4);
+    
+}
+
+.all_input {
+    margin-top: 8rem;
+}
+
+.login-title {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    color: var(--wheat);
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.inputbox {
+    display: grid;
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.inputicon {
+    position: absolute;
+    color: white;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1em;
+    margin-left: 35px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+    top: -15px;
+    left: -2rem;
+}
+.inputbox input {
+    width: 100%;
+    height: 20px;
+    margin: 5px 0px 5px 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+}
+
+.forget {
+    margin: 4rem 0 15px;
+    letter-spacing: .6px;
+    font-size: .9em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forget a {
+    color: white;
+    font-style: italic;
+}
+.forget a:hover {
+    color: var(--cream);
+    font-style: italic;
+}
+
+.login_button {
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    padding: 5px;
+    position: relative;
+    width: 310px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+    text-align: center;
+    letter-spacing: 1px;
+    border: none;
+  }
+  .login_button p {
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    top: 0.4em;
+    left: 1.15em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: var(--blueGray);
+    text-transform: uppercase;
+  }
+  .login_button i {
+    position: absolute;
+    top: .6em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    color: white;
+    fill: #fff;
+  }
+  .login_button:hover p {
+    margin-right: 14rem;
+    color: var(--cream);
+  }
+  .login_button:hover i {
+    opacity: 1;
+  }
+  .login_button:hover {
+    background: linear-gradient(92.47deg, #6096B4 0%, #EEE9DA 49.6%,
+     rgba(96, 150, 180, 0) 141.04%);
+  }
+
+
+.signup {
+    color: white;
+    letter-spacing: .6px;
+    font-size: 14px;
+}
+.signup a {
+    color: white;
+}
+.signup a:hover {
+    color: var(--lighterBlue);
+}
+
+
+.Login {
+    position: relative;
+  }
+  
+  .test-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -5;
+  }

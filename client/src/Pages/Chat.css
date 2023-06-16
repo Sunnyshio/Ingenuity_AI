@@ -1,0 +1,459 @@
+:root{
+    --darkerBlue:#51819B;
+    --lighterBlue: #93bfcf;
+    --blueGray: #bdcdd6;
+    --wheat: #eee9da;
+    --white: #FFFFFF;
+    --bg: #000;
+    --hover-text: #000;
+    --main: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+.form_wrapper {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    width: 90%;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+    transition: 0.2s;
+}
+
+.form_pdfFile_import {
+    display: block;
+    margin: auto;
+    margin-top: 4px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    border: 1px dashed white;
+    width: 95%;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 9px;
+}
+
+.chosen_filename_text {
+    display: flex;
+    position: absolute;
+    font-size: 1rem;
+    letter-spacing: .5px;
+    color: white;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+}
+.chosen_filename_text p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.upload_icon {
+    position: absolute;
+    display: block;
+    margin: auto;
+    margin-top: 1px;
+    margin-left: 8.4rem;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.chosen_filename_text:hover p {
+    margin-left: -1.5rem;
+    transition: 0.2s ease-in-out;
+}
+.chosen_filename_text:hover .upload_icon {
+    opacity: 1;
+    transition: .5s;
+}
+  
+.file_upload_section {
+    text-align: center;
+}
+.file_upload_section p {
+    letter-spacing: 1px;
+    margin-top: 1px;
+}
+
+.side {
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url("../components/img/des2.png");
+    height: 100vh;
+    box-shadow: rgba(0, 0, 0, 0.4) 1.95px 1.95px 2.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.sidebar_header {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.smartreview_button {
+    width: 90%;
+    height: 3.6rem;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 1rem;
+    border: 1px solid var(--bg);
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    transition: 0.2s;
+    border: none;
+}
+
+.link_to_smartreview {
+    display: flex;
+    width: 100%;
+    height: 3.6rem;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.smartreview_button:hover {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    cursor: pointer;
+}
+
+.new_chat_text {
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-top: 14px;
+    margin-right: 8px;
+}
+
+.import_pdf_text {
+    color: white;
+    text-align: center;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    margin-top: -16px;
+}
+
+.icon__back{
+    margin-right: 0.7rem;
+}
+
+.sidebar_footer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.footer_iconn {
+    width: 20px;
+    height: 20px;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: -1px;
+}
+
+.footer_namee {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    
+}
+
+.footer_icon_ellip {
+    width: 20px;
+    height: 20px;
+    color: white;
+    margin-top: 5px;
+}
+.main {
+    position: absolute;
+    margin-bottom: 1rem;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.chatclass {
+    background-color: #000;
+}
+
+.icon_trash {
+    position: absolute;
+    right: 2rem;
+    color: var(black);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 5rem;
+    
+}
+
+.main_header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.1rem 0;
+}
+
+.main_header-title {
+    margin-left: 16rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: var(--darkerBlue);
+    position: fixed;
+}
+
+.main_footer {
+    width: 100%;
+}
+
+.option_links {
+    text-decoration: none;
+    color: black;
+}
+.option_icons {
+    margin-right: 9px;
+}
+.submenu_wrapper {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    max-height: 0px;
+    width: 91%; 
+    background-color: #fff;
+    margin-bottom: 13rem;
+    border-radius: 10px;
+    transition: all 0.8s ease;
+}
+.submenu_wrapper p {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-left: .5rem;
+    padding-left: 10px;
+    font-size: 14px;
+    letter-spacing: .5px;
+    left: 0;
+    cursor: pointer;
+}
+.submenu_wrapper p:hover {
+    background-color: #e6e4e4;
+    height: 1rem;
+    width: 10rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+.submenu_wrapper.open-menu {
+    max-height: 500px;
+}
+
+.pdf_list {
+    margin-left: .1rem;
+}
+.pdf_list p {
+    color: white;
+    text-align: start;
+    margin-top: 1rem;
+    font-size: 15px;
+    letter-spacing: .7px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.pdf_list_icon {
+    margin-right: 10px;
+}
+.pdf_list p:hover {
+    background-color: rgba(167, 163, 163, 0.3);
+    border-radius: 8px;
+}
+
+.bubblechat {
+    display: flex;
+    margin-top: -1rem;
+    align-items: baseline;
+    margin-left: 5px;
+    word-wrap: break-word;
+    max-width: 60%;
+}
+
+/* .bubblechat span, .bubblechat2 span {
+    width: 45rem;
+} */
+
+.bubblechat2 {
+    word-wrap: break-word;
+}
+  
+.bubblechat_display {
+    margin-left: 15.5rem;
+}
+.bubblechat_display .p2 {
+    padding: 10px;
+    background: #f1f4ff;
+    border-radius: 5px;
+}
+.chatuser {
+    display: flex;
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+.chatbot {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    border-radius: 50%;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.bubblechat2 .p2 {
+    margin-right: 20px;
+    letter-spacing: .3px;
+    display: inline-block;
+    text-align: right;
+}
+
+.main_p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    transform: translateY(1000%);
+}
+
+.chatbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 10px;
+    background: white;
+    width: 80%;
+    height: 3rem;
+    position: fixed;
+    bottom: 1rem;
+    align-items: center;
+    margin-left: 16rem;
+    flex-wrap: wrap;
+}
+
+.chatbar_input {
+    position: absolute;
+    display: grid;
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+    resize: none;
+    margin-left: 1rem;
+    overflow: hidden;
+  }
+  
+  .chatbar_label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    margin-left: -1.5rem;
+    color: black;
+    font-size: 1em;
+    padding-left: 35px;
+    transition: opacity 0.01s;
+  }
+  
+  .chatbar_label.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .bubblechat2 {
+    display: flex;
+    align-items: baseline;
+    margin-right: 2rem;
+    text-align: right;
+    justify-content: right;
+  }
+
+  .send_button {
+    position: absolute;
+    display: flex;
+    font-size: 20px;
+    color: var(--darkerBlue);
+    background-color: white;
+    right: 0;
+    padding: 10px;
+    border: none;
+    border-radius: 16px;
+    transition: all 0.2s;
+  }
+  .send_button svg {
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .send_button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+    padding-right: 5px;
+  }
+  
+  .send_button:hover svg {
+    transform: rotate(45deg) scale(1.1);
+  }
+  
+  .send_button:active {
+    transform: scale(0.95);
+  }
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+
+  .rectangle {
+    position: fixed;
+    bottom: 0;
+    margin-left: 14rem;
+    background-color: white;
+    width: 100%;
+    height: 4.1rem;
+    z-index: 0;
+  }
+
+  
+  
